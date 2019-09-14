@@ -15,7 +15,7 @@ vector<int> getInput(string s) {
 void IMT2016001(char* filename) {
   ifstream image;
   image.open(filename);
-  ofstream filtered("output_task4_imt2016001.ppm");
+  ofstream filtered("output_task4.ppm");
   string mode;
   int h, w, max;
   image>>mode>>w>>h>>max;
@@ -50,7 +50,7 @@ void IMT2016029(char* filename) {
   //Image sc();
   //sci.Images(im);
 
-  std::ofstream outFile("output_task7_imt2016029.ppm");
+  std::ofstream outFile("output_task7.ppm");
   outFile << str << endl;
   outFile << wt << " " << ht << endl;
   outFile << maxCol << endl;
@@ -70,12 +70,12 @@ void IMT2016057(char* filename) {
   input>>(*img);
   xAxisReflection *xref = new xAxisReflection((*img));
   GaussianFilter *g = new GaussianFilter(*xref);
-  output1.open("output_task3_imt2016057_gaussian.ppm");
+  output1.open("output_task3_gaussian.ppm");
   output1<<type<<"\n";
   output1<<w<<" "<<h<<"\n";
   output1<<max<<"\n";
   output1<<(*g);
-  output2.open("output_task3_imt2016057.ppm");
+  output2.open("output_task3.ppm");
   CompositeImage * res = new CompositeImage((*g),(*xref),0.6);
   output2<<type<<"\n";
   output2<<w<<" "<<h<<"\n";
@@ -113,7 +113,7 @@ void IMT2016099(char* filename) {
   Image f = t2.gaussian(p, r);
   CompositeImage * res = new CompositeImage(image, f, 0.25);
   ofstream output;
-  output.open("output_task2_imt2016099.ppm");
+  output.open("output_task2.ppm");
   output<<mode<<"\n";
   output<<w<<" "<<h<<"\n";
   output<<max<<"\n";
@@ -152,7 +152,7 @@ void IMT2016118(char* filename) {
   binary_conversion_image(&brightness, find_median(threshold));
   connected_components(&brightness);
   coloring_image(I,&brightness);
-  ofstream out("output_task6_imt2016118.ppm");
+  ofstream out("output_task6.ppm");
   out<<"P3"<<endl;
   out<<I->get_width()<<" "<<I->get_height()<<endl;
   out<<255<<endl;

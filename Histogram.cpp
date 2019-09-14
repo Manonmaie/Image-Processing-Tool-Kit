@@ -51,7 +51,7 @@ Histogram::Histogram(Image image) {
       histoImage.setColor(h - j - 1, i, 0, 0, 0);
     }
   }
-  ofstream out("output_task4_imt2016001_histogram.ppm");
+  ofstream out("output_task4_histogram.ppm");
   out<<"P3"<<endl;
   out<<histogram.size()<<" "<<h<<endl;
   out<<255<<endl;

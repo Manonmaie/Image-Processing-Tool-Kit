@@ -134,7 +134,7 @@ void task5(Image *I){
   }
   //cout << *histogram;
   // cout << *Image_C;
-  ofstream fout("output_task5_imt2016079.ppm");
+  ofstream fout("output_task5.ppm");
   CompositeImage compImage(*Image_C, *Image_D, 0.2);
   string mode = "P3";
   int h = compImage.get_height();
