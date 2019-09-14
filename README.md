@@ -3,6 +3,7 @@ A toolkit which will manipulate given image to make it blur, clip, stencil, coll
 
 # Usage:
 Compile - g++ *.cpp -o image_processing
+
 Run - ./image_processing <image_file>
 
 # Output:
