@@ -7,4 +7,4 @@ Compile - g++ *.cpp -o image_processing
 Run - ./image_processing <image_file>
 
 # Output:
-The output image will be created in the same directory(as the executable) named output_taskx_id.ppm
+The output image will be created in the same directory(as the executable) named output_taskId.ppm
